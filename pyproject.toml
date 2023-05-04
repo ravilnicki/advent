@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "advent"
-version = "1.0.0"
+version = "1.0.1"
 description = "Get your Advent of Code puzzle input and much more!"
 readme = "README.md"
 authors = [{ name = "ravilnicki", email = "ravilnicki@gmail.com" }]

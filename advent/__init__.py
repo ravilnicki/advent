@@ -2,7 +2,8 @@ import os
 
 import dotenv
 
-dotenv.load_dotenv()
+dotenv_path = dotenv.find_dotenv(usecwd=True)
+dotenv.load_dotenv(dotenv_path)
 
 __version__ = "1.0.0"
 
