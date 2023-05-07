@@ -22,5 +22,5 @@ def get_puzzle_input(year: int, day: int) -> str:
 def get_ints(string: str) -> list[int]:
     """Return a list of integers found in a string"""
 
-    ints = re.findall(r"\d+", string)
+    ints = [int(n) for n in re.findall(r"\d+", string)]
     return ints
