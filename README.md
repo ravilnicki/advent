@@ -30,7 +30,7 @@ from advent.functions import get_puzzle_input, get_ints
 get_puzzle_input(2022, 22)
 
 # returns [2, 3]
-get_ints("Point x=2, y=3")
+list(get_ints("Point x=2, y=3"))
 ```
 
 ## Contributing

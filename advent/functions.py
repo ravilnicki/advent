@@ -1,6 +1,7 @@
 import re
 import urllib.request
 from functools import cache
+from typing import Iterator
 
 import advent
 from advent.errors import handle_error
@@ -19,8 +20,8 @@ def get_puzzle_input(year: int, day: int) -> str:
     return data
 
 
-def get_ints(string: str) -> list[int]:
-    """Return a list of integers found in a string"""
+def get_ints(string: str) -> Iterator[int]:
+    """Extract and yield integers from a given string"""
 
-    ints = [int(n) for n in re.findall(r"\d+", string)]
-    return ints
+    for n in re.finditer(r"-?\d+", string):
+        yield int(n.group())
